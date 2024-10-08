@@ -1,0 +1,27 @@
+#################################################################
+#                  *S C R I P T    M I N D S*                   #
+#################################################################
+
+
+
+
+
+
+
+
+
+#################################################################
+#ColorSpace_Convert
+
+
+import nuke
+from ColorSpaceTransform import apply_input_transform_to_selected  # Import the function from ColorSpaceTransform.py
+
+# Define the icon path
+Logo = "C:/Program Files/Nuke14.0v1/plugins/icons/Scriptminds_ICON.png"
+
+# Create the main ScriptMinds menu with an icon
+scriptminds_menu = nuke.menu('Nuke').addMenu('ScriptMinds', icon=Logo)
+
+# Add the "Find Directory" command under the ScriptMinds menu
+scriptminds_menu.addCommand('ScriptMinds/ColorSpace Convert', apply_input_transform_to_selected, 'Alt+Shift+C')
